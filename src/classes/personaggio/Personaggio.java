@@ -3,19 +3,19 @@ package classes.personaggio;
 import utility.*;
 
 public class Personaggio {
-    private int PF = 0;
-    private int MP = 0;
+    private int puntiFerita = 0;
+    private int manaPoint = 0;
     private int attacco = 0;
     private int difesa = 0;
 
-    public Personaggio(int PF, int MP, int attacco, int difesa) {
+    public Personaggio(int puntiFerita, int manaPoint, int attacco, int difesa) {
 
-        Utility.pfCheck(PF);
-        Utility.mpCheck(MP);
+        Utility.pfCheck(puntiFerita);
+        Utility.mpCheck(manaPoint);
         Utility.attaccoCheck(attacco);
         Utility.difesaCheck(difesa);
-        this.PF = PF;
-        this.MP = MP;
+        this.puntiFerita = puntiFerita;
+        this.manaPoint = manaPoint;
         this.attacco = attacco;
         this.difesa = difesa;
 
@@ -23,12 +23,12 @@ public class Personaggio {
 
     public void setPF(int pf) {
         Utility.pfCheck(pf);
-        this.PF = pf;
+        this.puntiFerita = pf;
     }
 
     public void setMP(int mp) {
         Utility.mpCheck(mp);
-        this.MP = mp;
+        this.manaPoint = mp;
     }
 
     public void setAttacco(int attacco) {
@@ -42,11 +42,11 @@ public class Personaggio {
     }
 
     public int getPF() {
-        return this.PF;
+        return this.puntiFerita;
     }
 
     public int getMP() {
-        return this.MP;
+        return this.manaPoint;
     }
 
     public int getAttacco() {
