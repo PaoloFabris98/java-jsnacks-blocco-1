@@ -21,14 +21,14 @@ public class Personaggio {
 
     }
 
-    public void setPF(int pf) {
-        Utility.pfCheck(pf);
-        this.puntiFerita = pf;
+    public void setPF(int puntiFerita) {
+        Utility.pfCheck(puntiFerita);
+        this.puntiFerita = puntiFerita;
     }
 
-    public void setMP(int mp) {
-        Utility.mpCheck(mp);
-        this.manaPoint = mp;
+    public void setMP(int manaPoint) {
+        Utility.mpCheck(manaPoint);
+        this.manaPoint = manaPoint;
     }
 
     public void setAttacco(int attacco) {
