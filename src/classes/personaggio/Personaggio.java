@@ -19,47 +19,48 @@ public class Personaggio {
 
     }
 
-    void pfCheck(int PF) {
+    private void pfCheck(int PF) {
         if (PF <= 0) {
             throw new IllegalArgumentException("I punti vita non possono essere inizializzati come 0.");
         }
     }
 
-    void mpCheck(int MP) {
+    private void mpCheck(int MP) {
         if (MP < 0) {
             throw new IllegalArgumentException("I mana point non possono essere inferiori a 0.");
         }
     }
 
-    void attaccoCheck(int attacco) {
+    private void attaccoCheck(int attacco) {
         if (attacco < 0) {
             throw new IllegalArgumentException("l'attacco non può essere inizializzato come 0");
         }
     }
 
-    void difesaCheck(int difesa) {
+    private void difesaCheck(int difesa) {
         if (difesa < 0) {
             throw new IllegalArgumentException("la difesa non può essere inizializzata come 0");
         }
     }
 
-    void setPF(int pf) {
+    public void setPF(int pf) {
         pfCheck(pf);
         this.PF = pf;
     }
 
-    void setMP(int mp) {
+    public void setMP(int mp) {
         mpCheck(mp);
         this.MP = mp;
     }
 
-    void setAttacco(int attacco) {
+    public void setAttacco(int attacco) {
         attaccoCheck(attacco);
         this.attacco = attacco;
     }
 
-    void setDifesa(int difesa) {
+    public void setDifesa(int difesa) {
         difesaCheck(difesa);
         this.difesa = difesa;
     }
+
 }
