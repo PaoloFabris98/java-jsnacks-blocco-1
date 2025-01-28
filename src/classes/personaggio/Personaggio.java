@@ -63,4 +63,20 @@ public class Personaggio {
         this.difesa = difesa;
     }
 
+    public int getPF() {
+        return this.PF;
+    }
+
+    public int getMP() {
+        return this.MP;
+    }
+
+    public int getAttacco() {
+        return this.attacco;
+    }
+
+    public int getDifesa() {
+        return this.difesa;
+    }
+
 }
