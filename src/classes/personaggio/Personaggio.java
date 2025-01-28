@@ -44,9 +44,22 @@ public class Personaggio {
     }
 
     void setPF(int pf) {
-        if (pf <= 0) {
-            throw new IllegalArgumentException("I punti vita non possono essere inizializzati come 0.");
-        }
+        pfCheck(pf);
         this.PF = pf;
+    }
+
+    void setMP(int mp) {
+        mpCheck(mp);
+        this.MP = mp;
+    }
+
+    void setAttacco(int attacco) {
+        attaccoCheck(attacco);
+        this.attacco = attacco;
+    }
+
+    void setDifesa(int difesa) {
+        difesaCheck(difesa);
+        this.difesa = difesa;
     }
 }
