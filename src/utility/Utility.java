@@ -24,4 +24,7 @@ public class Utility {
             throw new IllegalArgumentException("la difesa non può essere inizializzata come 0");
         }
     }
+
+    public static void isDead() {
+    }
 }
