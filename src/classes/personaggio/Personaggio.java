@@ -19,5 +19,11 @@ public class Personaggio {
         if (difesa < 0) {
             throw new IllegalArgumentException("la difesa non può essere inizializzata come 0");
         }
+
+        this.PF = PF;
+        this.MP = MP;
+        this.attacco = attacco;
+        this.difesa = difesa;
+
     }
 }
