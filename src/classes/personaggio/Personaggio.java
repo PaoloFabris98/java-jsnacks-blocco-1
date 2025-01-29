@@ -135,7 +135,7 @@ public class Personaggio {
     }
 
     public int getAgilità() {
-        return this.difesa;
+        return this.agilità;
     }
 
     public int getIntelligenza() {
