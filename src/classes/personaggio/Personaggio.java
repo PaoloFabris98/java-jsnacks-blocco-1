@@ -3,42 +3,72 @@ package classes.personaggio;
 import utility.*;
 
 public class Personaggio {
-    private int puntiFerita = 0;
-    private int manaPoint = 0;
-    private int attacco = 0;
-    private int difesa = 0;
+    protected String Nome;
+    protected int puntiFeritaTotali = 0;
+    protected int puntiFerita = 0;
+    protected int manaPointTotali = 0;
+    protected int manaPoint = 0;
+    protected int attaccoTotale = 0;
+    protected int attacco = 0;
+    protected int difesaTotale = 0;
+    protected int difesa = 0;
+    protected boolean isDead = false;
 
-    public Personaggio(int puntiFerita, int manaPoint, int attacco, int difesa) {
-
-        Utility.pfCheck(puntiFerita);
-        Utility.mpCheck(manaPoint);
-        Utility.attaccoCheck(attacco);
-        Utility.difesaCheck(difesa);
+    public void setPuntiFerita(int puntiFerita) {
+        Utility.belowEqualZero(puntiFerita);
         this.puntiFerita = puntiFerita;
-        this.manaPoint = manaPoint;
-        this.attacco = attacco;
-        this.difesa = difesa;
-
-    }
-
-    public void setPF(int puntiFerita) {
-        Utility.pfCheck(puntiFerita);
-        this.puntiFerita = puntiFerita;
+        this.puntiFeritaTotali = puntiFerita;
     }
 
     public void setMP(int manaPoint) {
-        Utility.mpCheck(manaPoint);
+        Utility.belowZero(manaPoint);
         this.manaPoint = manaPoint;
+        this.manaPointTotali = manaPoint;
     }
 
     public void setAttacco(int attacco) {
-        Utility.attaccoCheck(attacco);
+        Utility.belowZero(attacco);
         this.attacco = attacco;
+        this.attaccoTotale = attacco;
     }
 
     public void setDifesa(int difesa) {
-        Utility.difesaCheck(difesa);
+        Utility.belowZero(difesa);
         this.difesa = difesa;
+        this.difesaTotale = difesa;
+    }
+
+    public void subtractPuntiFerita(int i) {
+        if (Utility.isDead(i, this.puntiFerita)) {
+            this.isDead = true;
+            this.puntiFerita = 0;
+        } else {
+            this.puntiFerita = puntiFerita - i;
+        }
+    }
+
+    public void addPuntiFerita(int i) {
+        if ((this.puntiFerita + i) > this.puntiFeritaTotali) {
+            this.puntiFerita = this.puntiFeritaTotali;
+        } else {
+            this.puntiFerita += i;
+        }
+    }
+
+    public void subtractManaPoint(int i) {
+        if ((this.manaPoint - i) < 0) {
+            this.manaPoint = 0;
+        } else {
+            this.manaPoint -= i;
+        }
+    }
+
+    public void addManaPoin(int i) {
+        if ((this.manaPoint + i) > this.manaPointTotali) {
+            this.manaPoint = this.manaPointTotali;
+        } else {
+            this.manaPoint += i;
+        }
     }
 
     public int getPF() {
