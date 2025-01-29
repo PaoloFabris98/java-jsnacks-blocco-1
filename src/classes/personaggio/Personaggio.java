@@ -12,30 +12,58 @@ public class Personaggio {
     protected int attacco = 0;
     protected int difesaTotale = 0;
     protected int difesa = 0;
+    protected int agilitàTotale = 0;
+    protected int agilità = 0;
     protected boolean isDead = false;
+
+    public void setPuntiFeritaMax(int puntiFerita) {
+        Utility.belowEqualZero(puntiFerita);
+        this.puntiFeritaTotali = puntiFerita;
+    }
+
+    public void setManaPointMax(int manaPoint) {
+        Utility.belowZero(manaPoint);
+        this.manaPointTotali = manaPoint;
+    }
+
+    public void setAttaccoMax(int attacco) {
+        Utility.belowZero(attacco);
+        this.attaccoTotale = attacco;
+    }
+
+    public void setDifesaMax(int difesa) {
+        Utility.belowZero(difesa);
+        this.difesaTotale = difesa;
+    }
+
+    public void setAgilitàMax(int agilità) {
+        Utility.belowZero(agilità);
+        this.agilitàTotale = agilità;
+    }
 
     public void setPuntiFerita(int puntiFerita) {
         Utility.belowEqualZero(puntiFerita);
         this.puntiFerita = puntiFerita;
-        this.puntiFeritaTotali = puntiFerita;
     }
 
-    public void setMP(int manaPoint) {
+    public void setManaPoint(int manaPoint) {
         Utility.belowZero(manaPoint);
         this.manaPoint = manaPoint;
-        this.manaPointTotali = manaPoint;
     }
 
     public void setAttacco(int attacco) {
         Utility.belowZero(attacco);
         this.attacco = attacco;
-        this.attaccoTotale = attacco;
     }
 
     public void setDifesa(int difesa) {
         Utility.belowZero(difesa);
         this.difesa = difesa;
-        this.difesaTotale = difesa;
+    }
+
+    public void setAgilità(int agilità) {
+        Utility.belowZero(agilità);
+        this.agilità = agilità;
     }
 
     public void subtractPuntiFerita(int i) {
@@ -69,6 +97,22 @@ public class Personaggio {
         } else {
             this.manaPoint += i;
         }
+    }
+
+    public int getPuntiFeritaTotali() {
+        return this.puntiFeritaTotali;
+    }
+
+    public int getaddManaPoinTotali() {
+        return this.manaPointTotali;
+    }
+
+    public int getAttaccoTotale() {
+        return this.attaccoTotale;
+    }
+
+    public int getDifesaTotale() {
+        return this.difesaTotale;
     }
 
     public int getPF() {
