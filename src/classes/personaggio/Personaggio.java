@@ -1,5 +1,6 @@
 package classes.personaggio;
 
+import equip.equipaggiamento;
 import utility.*;
 
 public class Personaggio {
@@ -129,6 +130,36 @@ public class Personaggio {
 
     public int getDifesa() {
         return this.difesa;
+    }
+
+    public int getAgilità() {
+        return this.difesa;
+    }
+
+    public void equip(equipaggiamento temp) {
+        this.agilità += temp.getAgilità();
+        this.agilitàTotale += temp.getAgilità();
+        this.difesa += temp.getDifesa();
+        this.difesaTotale += temp.getDifesa();
+        this.attacco += temp.getAttacco();
+        this.attaccoTotale += temp.getAttacco();
+        this.puntiFerita += temp.getVita();
+        this.puntiFeritaTotali += temp.getVita();
+        this.manaPoint += temp.getMana();
+        this.manaPointTotali += temp.getMana();
+    }
+
+    public void unequip(equipaggiamento temp) {
+        this.agilità -= temp.getAgilità();
+        this.agilitàTotale -= temp.getAgilità();
+        this.difesa -= temp.getDifesa();
+        this.difesaTotale -= temp.getDifesa();
+        this.attacco -= temp.getAttacco();
+        this.attaccoTotale -= temp.getAttacco();
+        this.puntiFerita -= temp.getVita();
+        this.puntiFeritaTotali -= temp.getVita();
+        this.manaPoint -= temp.getMana();
+        this.manaPointTotali -= temp.getMana();
     }
 
 }
