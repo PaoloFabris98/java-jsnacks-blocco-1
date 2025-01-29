@@ -15,6 +15,8 @@ public class Personaggio {
     protected int difesa = 0;
     protected int agilitàTotale = 0;
     protected int agilità = 0;
+    protected int intelligenzaTotale = 0;
+    protected int intelligenza = 0;
     protected boolean isDead = false;
 
     public void setPuntiFeritaMax(int puntiFerita) {
@@ -136,6 +138,10 @@ public class Personaggio {
         return this.difesa;
     }
 
+    public int getIntelligenza() {
+        return this.intelligenza;
+    }
+
     public void equip(equipaggiamento temp) {
         this.agilità += temp.getAgilità();
         this.agilitàTotale += temp.getAgilità();
@@ -147,6 +153,8 @@ public class Personaggio {
         this.puntiFeritaTotali += temp.getVita();
         this.manaPoint += temp.getMana();
         this.manaPointTotali += temp.getMana();
+        this.intelligenza += temp.getIntelligenza();
+        this.intelligenzaTotale += temp.getIntelligenza();
     }
 
     public void unequip(equipaggiamento temp) {
@@ -160,6 +168,8 @@ public class Personaggio {
         this.puntiFeritaTotali -= temp.getVita();
         this.manaPoint -= temp.getMana();
         this.manaPointTotali -= temp.getMana();
+        this.intelligenza -= temp.getIntelligenza();
+        this.intelligenzaTotale -= temp.getIntelligenza();
     }
 
 }

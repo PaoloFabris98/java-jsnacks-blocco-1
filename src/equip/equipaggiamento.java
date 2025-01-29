@@ -9,6 +9,7 @@ public class equipaggiamento {
     int agilità = 0;
     int vita = 0;
     int mana = 0;
+    int intelligenza = 0;
 
     public void setAttacco(int attacco) {
         Utility.belowZero(attacco);
@@ -35,6 +36,11 @@ public class equipaggiamento {
         this.vita = vita;
     }
 
+    public void setIntelligenza(int intelligenza) {
+        Utility.belowZero(intelligenza);
+        this.intelligenza = intelligenza;
+    }
+
     public int getAttacco() {
         return this.attacco;
     }
@@ -53,6 +59,10 @@ public class equipaggiamento {
 
     public int getVita() {
         return this.difesa;
+    }
+
+    public int getIntelligenza() {
+        return this.intelligenza;
     }
 
 }

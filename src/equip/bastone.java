@@ -1,9 +1,9 @@
 package equip;
 
-import utility.*;
+import utility.Utility;
 
-public class spada extends equipaggiamento {
-    public spada(String nome, int attacco, int difesa, int agilità, int vita, int mana, int intelligenza) {
+public class bastone extends equipaggiamento {
+    public bastone(String nome, int attacco, int difesa, int agilità, int vita, int mana, int intelligenza) {
         Utility.belowZero(agilità);
         Utility.belowZero(difesa);
         Utility.belowZero(attacco);
@@ -18,5 +18,4 @@ public class spada extends equipaggiamento {
         this.mana = mana;
         this.intelligenza = intelligenza;
     }
-
 }

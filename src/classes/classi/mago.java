@@ -1,15 +1,17 @@
 package classes.classi;
 
 import utility.*;
+import classes.personaggio.*;
 
-public class mago extends classes.personaggio.Personaggio {
-    public mago(String nome, int puntiFerita, int manaPoint, int attacco, int difesa, int agilità) {
+public class mago extends Personaggio {
+    public mago(String nome, int puntiFerita, int manaPoint, int attacco, int difesa, int agilità, int intelligenza) {
 
         Utility.belowEqualZero(puntiFerita);
         Utility.belowZero(manaPoint);
         Utility.belowZero(attacco);
         Utility.belowZero(difesa);
         Utility.belowZero(agilità);
+        Utility.belowZero(intelligenza);
         this.puntiFeritaTotali = puntiFerita;
         this.puntiFerita = puntiFerita;
         this.manaPointTotali = manaPoint;
@@ -20,6 +22,8 @@ public class mago extends classes.personaggio.Personaggio {
         this.difesa = difesa;
         this.agilitàTotale = agilità;
         this.agilità = agilità;
+        this.intelligenzaTotale = intelligenza;
+        this.intelligenza = intelligenza;
 
     }
 
